@@ -7,6 +7,7 @@ import com.example.parkingtrafficcontrol.data.db.dao.TrafficRecordDao
 import com.example.parkingtrafficcontrol.data.db.entity.CarEntity
 import com.example.parkingtrafficcontrol.data.db.entity.CompanyEntity
 import com.example.parkingtrafficcontrol.data.db.entity.PersonEntity
+import com.example.parkingtrafficcontrol.data.db.entity.PlateNumberEntity
 import com.example.parkingtrafficcontrol.data.db.entity.TrafficRecordEntity
 
 class MainRepoImpl(
@@ -37,6 +38,14 @@ class MainRepoImpl(
 
     override suspend fun getAllCars(): List<CarEntity> {
         return carDao.getCars()
+    }
+
+    override suspend fun insertPlateNumber(plateNumberEntity: PlateNumberEntity) {
+        return carDao.insertPlateNumber(plateNumberEntity)
+    }
+
+    override suspend fun getAllPlateNumbers(): List<PlateNumberEntity> {
+        return carDao.getPlateNumbers()
     }
 
     override suspend fun insertTrafficRecord(trafficRecordEntity: TrafficRecordEntity) {

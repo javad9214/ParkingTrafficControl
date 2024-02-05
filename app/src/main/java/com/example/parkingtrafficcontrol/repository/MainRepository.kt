@@ -3,6 +3,7 @@ package com.example.parkingtrafficcontrol.repository
 import com.example.parkingtrafficcontrol.data.db.entity.CarEntity
 import com.example.parkingtrafficcontrol.data.db.entity.CompanyEntity
 import com.example.parkingtrafficcontrol.data.db.entity.PersonEntity
+import com.example.parkingtrafficcontrol.data.db.entity.PlateNumberEntity
 import com.example.parkingtrafficcontrol.data.db.entity.TrafficRecordEntity
 
 interface MainRepository {
@@ -15,6 +16,9 @@ interface MainRepository {
 
     suspend fun insertCar(carEntity: CarEntity)
     suspend fun getAllCars():List<CarEntity>
+
+    suspend fun insertPlateNumber(plateNumberEntity: PlateNumberEntity)
+    suspend fun getAllPlateNumbers(): List<PlateNumberEntity>
 
     suspend fun insertTrafficRecord(trafficRecordEntity: TrafficRecordEntity)
     suspend fun getAllTrafficRecord():List<TrafficRecordEntity>
