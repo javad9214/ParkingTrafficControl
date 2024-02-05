@@ -1,7 +1,6 @@
 package com.example.parkingtrafficcontrol.data.model
 
 import com.example.parkingtrafficcontrol.data.db.entity.CarEntity
-import com.example.parkingtrafficcontrol.data.db.entity.PersonEntity
 
 data class Car(
     val id: Long, // Auto-incremented starting from 1001
