@@ -9,14 +9,15 @@ import com.example.parkingtrafficcontrol.data.db.dao.TrafficRecordDao
 import com.example.parkingtrafficcontrol.data.db.entity.CarEntity
 import com.example.parkingtrafficcontrol.data.db.entity.CompanyEntity
 import com.example.parkingtrafficcontrol.data.db.entity.PersonEntity
+import com.example.parkingtrafficcontrol.data.db.entity.PlateNumberEntity
 import com.example.parkingtrafficcontrol.data.db.entity.TrafficRecordEntity
 
 @Database(
-    entities = [PersonEntity::class, CompanyEntity::class, CarEntity::class, TrafficRecordEntity::class],
+    entities = [PersonEntity::class, CompanyEntity::class, CarEntity::class, TrafficRecordEntity::class, PlateNumberEntity::class],
     version = 1,
     exportSchema = false
 )
-abstract class AppDatabase: RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
     abstract fun personDao(): PersonDao
     abstract fun companyDao(): CompanyDao
