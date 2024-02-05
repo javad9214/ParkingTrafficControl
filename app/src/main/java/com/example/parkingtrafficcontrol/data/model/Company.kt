@@ -5,12 +5,13 @@ import com.example.parkingtrafficcontrol.data.db.entity.CompanyEntity
 data class Company(
     val id: Long, // Auto-incremented starting from 1001
     val name: String,
+    val personId: Long
 ){
     fun toEntity(): CompanyEntity {
-        return CompanyEntity(id, name)
+        return CompanyEntity(id, name, personId)
     }
 
     fun CompanyEntity.toCompany(): Company {
-        return Company(id, name)
+        return Company(id, name, personId)
     }
 }
